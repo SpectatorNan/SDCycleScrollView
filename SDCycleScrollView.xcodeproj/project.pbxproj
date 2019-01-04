@@ -14,6 +14,8 @@
 		485B54781C3A196C001944FA /* pageControlDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 485B54741C3A196C001944FA /* pageControlDot@3x.png */; };
 		485B54791C3A196C001944FA /* pageControlCurrentDot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 485B54751C3A196C001944FA /* pageControlCurrentDot@3x.png */; };
 		485B547A1C3A196C001944FA /* pageControlCurrentDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 485B54761C3A196C001944FA /* pageControlCurrentDot@2x.png */; };
+		56F870A121DF571400F17A1A /* SNPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F870A021DF571400F17A1A /* SNPageControl.m */; };
+		56F870A421DF5FDE00F17A1A /* SNDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F870A321DF5FDE00F17A1A /* SNDotView.m */; };
 		6BAA27FD1EFEA798008693AB /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAA27FC1EFEA798008693AB /* CustomCollectionViewCell.m */; };
 		9900D1741ABEB2490077A6CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9900D1731ABEB2490077A6CB /* main.m */; };
 		9900D1771ABEB2490077A6CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9900D1761ABEB2490077A6CB /* AppDelegate.m */; };
@@ -55,6 +57,10 @@
 		485B54741C3A196C001944FA /* pageControlDot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlDot@3x.png"; sourceTree = "<group>"; };
 		485B54751C3A196C001944FA /* pageControlCurrentDot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@3x.png"; sourceTree = "<group>"; };
 		485B54761C3A196C001944FA /* pageControlCurrentDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pageControlCurrentDot@2x.png"; sourceTree = "<group>"; };
+		56F8709F21DF571400F17A1A /* SNPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNPageControl.h; sourceTree = "<group>"; };
+		56F870A021DF571400F17A1A /* SNPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNPageControl.m; sourceTree = "<group>"; };
+		56F870A221DF5FDE00F17A1A /* SNDotView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNDotView.h; sourceTree = "<group>"; };
+		56F870A321DF5FDE00F17A1A /* SNDotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNDotView.m; sourceTree = "<group>"; };
 		5901AA37D1ED166BA94A95E0 /* Pods-SDCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDCycleScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDCycleScrollView/Pods-SDCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
 		5F55240E74603C429F5220D2 /* Pods-SDCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDCycleScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDCycleScrollView/Pods-SDCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 		6BAA27FB1EFEA798008693AB /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
@@ -138,6 +144,17 @@
 			path = "xib的demo";
 			sourceTree = "<group>";
 		};
+		56F8709E21DF56E400F17A1A /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				56F8709F21DF571400F17A1A /* SNPageControl.h */,
+				56F870A021DF571400F17A1A /* SNPageControl.m */,
+				56F870A221DF5FDE00F17A1A /* SNDotView.h */,
+				56F870A321DF5FDE00F17A1A /* SNDotView.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		570A4158ABBA037265E03A8B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +187,7 @@
 		9900D1701ABEB2490077A6CB /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				56F8709E21DF56E400F17A1A /* PageControl */,
 				48377B8A1C10265E007B8C21 /* DemoVC */,
 				9900D1971ABEB2C70077A6CB /* Lib */,
 				9900D1751ABEB2490077A6CB /* AppDelegate.h */,
@@ -429,9 +447,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9900D17A1ABEB2490077A6CB /* ViewController.m in Sources */,
+				56F870A421DF5FDE00F17A1A /* SNDotView.m in Sources */,
 				990141031AC941FD00D0D74F /* TADotView.m in Sources */,
 				990141011AC941FD00D0D74F /* TAAbstractDotView.m in Sources */,
 				6BAA27FD1EFEA798008693AB /* CustomCollectionViewCell.m in Sources */,
+				56F870A121DF571400F17A1A /* SNPageControl.m in Sources */,
 				990141021AC941FD00D0D74F /* TAAnimatedDotView.m in Sources */,
 				9901410D1AC9420E00D0D74F /* UIView+SDExtension.m in Sources */,
 				9900D1771ABEB2490077A6CB /* AppDelegate.m in Sources */,

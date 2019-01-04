@@ -41,6 +41,7 @@ typedef enum {
 } SDCycleScrollViewPageContolAliment;
 
 typedef enum {
+    SDCycleScrollViewPageContolStyleLong,
     SDCycleScrollViewPageContolStyleClassic,        // 系统自带经典样式
     SDCycleScrollViewPageContolStyleAnimated,       // 动画效果pagecontrol
     SDCycleScrollViewPageContolStyleNone            // 不显示pagecontrol
@@ -166,8 +167,11 @@ typedef enum {
 /** 分页控件距离轮播图的右边间距（在默认间距基础上）的偏移量 */
 @property (nonatomic, assign) CGFloat pageControlRightOffset;
 
-/** 分页控件小圆标大小 */
+/** 其他分页控件小圆标大小 */
 @property (nonatomic, assign) CGSize pageControlDotSize;
+
+/** 当前分页控件小圆标大小 */
+@property (nonatomic, assign) CGSize currentPageControlDotSize;
 
 /** 当前分页控件小圆标颜色 */
 @property (nonatomic, strong) UIColor *currentPageDotColor;
