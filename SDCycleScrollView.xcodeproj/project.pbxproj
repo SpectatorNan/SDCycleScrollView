@@ -144,7 +144,7 @@
 			path = "xib的demo";
 			sourceTree = "<group>";
 		};
-		56F8709E21DF56E400F17A1A /* PageControl */ = {
+		56F8709E21DF56E400F17A1A /* SNPageControl */ = {
 			isa = PBXGroup;
 			children = (
 				56F8709F21DF571400F17A1A /* SNPageControl.h */,
@@ -152,7 +152,7 @@
 				56F870A221DF5FDE00F17A1A /* SNDotView.h */,
 				56F870A321DF5FDE00F17A1A /* SNDotView.m */,
 			);
-			path = PageControl;
+			path = SNPageControl;
 			sourceTree = "<group>";
 		};
 		570A4158ABBA037265E03A8B /* Pods */ = {
@@ -187,7 +187,6 @@
 		9900D1701ABEB2490077A6CB /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				56F8709E21DF56E400F17A1A /* PageControl */,
 				48377B8A1C10265E007B8C21 /* DemoVC */,
 				9900D1971ABEB2C70077A6CB /* Lib */,
 				9900D1751ABEB2490077A6CB /* AppDelegate.h */,
@@ -250,6 +249,7 @@
 		99E7B30A1AC11F1C009F9A2E /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				56F8709E21DF56E400F17A1A /* SNPageControl */,
 				990141051AC9420E00D0D74F /* SDCollectionViewCell.h */,
 				990141061AC9420E00D0D74F /* SDCollectionViewCell.m */,
 				990141071AC9420E00D0D74F /* SDCycleScrollView.h */,

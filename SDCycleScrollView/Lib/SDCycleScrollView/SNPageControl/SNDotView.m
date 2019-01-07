@@ -77,7 +77,7 @@ static CGFloat const kAnimateDuration = 1;
 
 - (void)animateToActiveStateWithIndex
 {
-    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.8 initialSpringVelocity:-20 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:-20 options:UIViewAnimationOptionCurveLinear animations:^{
         self.backgroundColor = self.selectedDotColor;
 //        self.transform = CGAffineTransformMakeScale(1.4, 1.4);
         CGRect frame = self.frame;
@@ -89,7 +89,7 @@ static CGFloat const kAnimateDuration = 1;
 - (void)animateToDeactiveState
 {
 
-    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
         self.backgroundColor = self.dotColor;
 //        self.transform = CGAffineTransformIdentity;
         CGRect frame = self.frame;
