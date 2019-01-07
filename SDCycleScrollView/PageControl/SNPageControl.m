@@ -97,7 +97,7 @@ static CGSize const kDefaultDotSize = {8, 8};
         if (i < self.dots.count) {
             dot = [self.dots objectAtIndex:i];
         } else {
-            [self generateDotView];
+            dot = [self generateDotView];
         }
 
         [self updateDotFrame: dot atIndex: i];
@@ -183,7 +183,7 @@ static CGSize const kDefaultDotSize = {8, 8};
 - (void)changeActivity:(BOOL)active atIndex:(NSInteger)index
 {
     SNDotView *dotView = (SNDotView *)[self.dots objectAtIndex:index];
-    [dotView changeActivityState:active currentPage:index index:index];
+    [dotView changeActivityState:active];
 
 }
 
@@ -243,6 +243,7 @@ static CGSize const kDefaultDotSize = {8, 8};
     // Post set
     [self changeActivity:YES atIndex:_currentPage];
 
+//    [self resetDotViews];
     [self updateDots];
 }
 

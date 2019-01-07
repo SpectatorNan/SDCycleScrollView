@@ -46,9 +46,13 @@ static CGFloat const kAnimateDuration = 1;
 - (void)setDotColor:(UIColor *)dotColor
 {
     _dotColor = dotColor;
+    self.backgroundColor = dotColor;
 //    self.layer.borderColor  = dotColor.CGColor;
 }
 
+- (void)setSelectedDotColor:(UIColor *)selectedDotColor {
+    _selectedDotColor = selectedDotColor;
+}
 
 
 - (void)initialization
@@ -61,46 +65,37 @@ static CGFloat const kAnimateDuration = 1;
 
 }
 
-- (void)changeActivityState:(BOOL)active currentPage:(NSInteger)currentPage index:(NSInteger)index
+- (void)changeActivityState:(BOOL)active
 {
     if (active) {
-        [self animateToActiveStateWithIndex:index currentPage:currentPage];
+        [self animateToActiveStateWithIndex];
     } else {
-        [self animateToDeactiveState:index currentPage:currentPage];
+        [self animateToDeactiveState];
     }
 }
 
 
-- (void)animateToActiveStateWithIndex:(NSInteger)index currentPage:(NSInteger)currentPage
+- (void)animateToActiveStateWithIndex
 {
-    self.backgroundColor = self.selectedDotColor;
-//    self.transform = CGAffineTransformMakeScale(1.4, 1.4);
-    CGRect frame = [self calculateFrameWithIndex:index currentPage:currentPage];
-    self.frame = frame;
-//    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:-20 options:UIViewAnimationOptionCurveLinear animations:^{
-//        self.backgroundColor = self.selectedDotColor;
+    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.8 initialSpringVelocity:-20 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.backgroundColor = self.selectedDotColor;
 //        self.transform = CGAffineTransformMakeScale(1.4, 1.4);
-//        CGRect frame = self.frame;
-//        frame.size = self.selectedDotSize;
-//        self.frame = frame;
-//    } completion:nil];
+        CGRect frame = self.frame;
+        frame.size = self.selectedDotSize;
+        self.frame = frame;
+    } completion:nil];
 }
 
-- (void)animateToDeactiveState:(NSInteger)index currentPage:(NSInteger)currentPage
+- (void)animateToDeactiveState
 {
 
-    self.backgroundColor = self.dotColor;
-//    self.transform = CGAffineTransformIdentity;
-    CGRect frame = [self calculateFrameWithIndex:index currentPage:currentPage];
-//    frame.size = self.dotSize;
-    self.frame = frame;
-//    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.5 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
-//        self.backgroundColor = self.dotColor;
+    [UIView animateWithDuration:kAnimateDuration delay:0 usingSpringWithDamping:.8 initialSpringVelocity:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.backgroundColor = self.dotColor;
 //        self.transform = CGAffineTransformIdentity;
-//        CGRect frame = self.frame;
-//        frame.size = self.dotSize;
-//        self.frame = frame;
-//    } completion:nil];
+        CGRect frame = self.frame;
+        frame.size = self.dotSize;
+        self.frame = frame;
+    } completion:nil];
 }
 
 - (CGRect)calculateFrameWithIndex:(NSInteger)index currentPage:(NSInteger)currentPage {

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSInteger spacingBetweenDots;
 
-- (void)changeActivityState:(BOOL)active currentPage:(NSInteger)currentPage index:(NSInteger)index;
+- (void)changeActivityState:(BOOL)active;
 
 @end
 
